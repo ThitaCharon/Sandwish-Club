@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.udacity.sandwichclub.DetailActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="@id/linearLayoutInfo"
+        android:id="@+id/Relativelayout_MainImage">
+
 
     <ImageView
         android:id="@+id/image_iv"
@@ -13,22 +30,34 @@
         android:contentDescription="@string/sandwich_picture_content_description"
         android:scaleType="centerCrop" />
 
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayoutInfo"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_constraintTop_toBottomOf = "@id/Relativelayout_MainImage">
+
     <TextView
         android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/detail_also_known_tv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="" android:background="@color/colorAccent" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,4 +85,9 @@
         android:layout_height="wrap_content"
         android:text="@string/detail_description_label"
         android:textStyle="bold" />
-</FrameLayout>
+</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
