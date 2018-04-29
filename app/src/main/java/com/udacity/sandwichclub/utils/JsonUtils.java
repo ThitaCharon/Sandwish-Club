@@ -32,7 +32,6 @@ public class JsonUtils {
         List<String> ingredients = new ArrayList<>();
         List<String> alsoKnowAs = new ArrayList<>();
 
-
         try {
             jasonObj = new JSONObject(json);
             jsonNameobj = jasonObj.getJSONObject(NAME);

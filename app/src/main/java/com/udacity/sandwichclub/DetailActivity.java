@@ -66,8 +66,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI() {
-
-
         if (sandwich.getAlsoKnownAs().isEmpty()){
             tv_also_know.setText("N/A");
         }else{
