@@ -35,21 +35,11 @@ public class JsonUtils {
         try {
             jasonObj = new JSONObject(json);
             jsonNameobj = jasonObj.getJSONObject(NAME);
-            mainName = jsonNameobj.optString("mainName");
-            Log.d("Log_Tag", mainName);
             alsoKnowAs = makeList(jsonNameobj.getJSONArray(ALSOKNOWAS));
-            if (alsoKnowAs.isEmpty() !=true){
-            Log.d("Log_Tag", alsoKnowAs.get(0));}
             placeOfOrigin = jasonObj.optString(PLACE_OF_ORIGIN);
-            Log.d("Log_Tag", placeOfOrigin);
             description = jasonObj.optString(DESCRIPTION);
-            Log.d("Log_Tag", description);
             imagelink = jasonObj.optString(IMAGELINK);
-            Log.d("Log_Tag", imagelink);
             ingredients = makeList(jasonObj.getJSONArray(INGREDIENTS));
-            for (int i=0;i<ingredients.size();i++){
-                Log.d("Log_Tag", ingredients.get(i)+"");
-            }
 
         } catch (JSONException e) {
             e.printStackTrace();
